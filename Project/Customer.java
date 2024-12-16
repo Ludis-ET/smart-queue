@@ -1,9 +1,9 @@
 package Project;
 
 public abstract class Customer {
-    final private String name;
-    final private int tokenNumber;
-    final private long arrivalTime;
+    private String name;
+    private int tokenNumber;
+    private long arrivalTime;
 
     public Customer(String name, int tokenNumber) {
         this.name = name;

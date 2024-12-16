@@ -1,4 +1,5 @@
 package Project;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
                 System.out.println("6. Exit");
 
                 System.out.print("Choose an option: ");
-                int choice = scanner.nextInt();
+                int choice = Integer.parseInt(scanner.nextLine());
 
                 switch (choice) {
                     case 1 -> addCustomer(smartQueue, "Regular", scanner);
@@ -36,8 +37,10 @@ public class Main {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred: " + e.getMessage());
             }
         }
     }
