@@ -1,5 +1,4 @@
 package Project;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -8,7 +7,10 @@ public class SmartQueue {
     private int tokenCounter;
 
     public SmartQueue() {
-        queue = new PriorityQueue<>(Comparator.comparingInt(Customer::getPriority));
+        queue = new PriorityQueue<>(
+            Comparator.comparingInt(Customer::getPriority)
+                      .thenComparingLong(Customer::getArrivalTime)
+        );
         tokenCounter = 0;
     }
 

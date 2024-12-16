@@ -3,10 +3,12 @@ package Project;
 public abstract class Customer {
     final private String name;
     final private int tokenNumber;
+    final private long arrivalTime;
 
     public Customer(String name, int tokenNumber) {
         this.name = name;
         this.tokenNumber = tokenNumber;
+        this.arrivalTime = System.currentTimeMillis();
     }
 
     public String getName() {
@@ -15,6 +17,10 @@ public abstract class Customer {
 
     public int getTokenNumber() {
         return tokenNumber;
+    }
+
+    public long getArrivalTime() {
+        return arrivalTime;
     }
 
     public abstract int getPriority();
