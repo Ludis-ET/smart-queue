@@ -1,8 +1,10 @@
+package Project;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class SmartQueue {
-    private PriorityQueue<Customer> queue;
+    final private PriorityQueue<Customer> queue;
     private int tokenCounter;
 
     public SmartQueue() {

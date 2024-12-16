@@ -1,6 +1,8 @@
+package Project;
+
 public abstract class Customer {
-    private String name;
-    private int tokenNumber;
+    final private String name;
+    final private int tokenNumber;
 
     public Customer(String name, int tokenNumber) {
         this.name = name;
